@@ -1,0 +1,20 @@
+func isPalindrome(number: Int) -> Bool {
+    let originalNumber = number
+    var reversedNumber = 0
+    var remainder: Int
+
+    while number != 0 {
+        remainder = number % 10
+        reversedNumber = reversedNumber * 10 + remainder
+        number /= 10
+    }
+
+    return originalNumber == reversedNumber
+}
+
+let num = 12321
+if isPalindrome(number: num) {
+    print("\(num) является палиндромом")
+} else {
+    print("\(num) не является палиндромом")
+}
